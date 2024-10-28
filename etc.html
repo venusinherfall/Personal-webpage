@@ -5,48 +5,53 @@
   <title>etc.</title>
 </head>
 <style>
-    body {background: rgb(255, 255, 255); background-image: url("FTBG.JPEG");
-                                    background-repeat: no-repeat;
-                                    background-position: 0% 70%;
-                                    background background-attachment: fixed;
-                                    background-size: 360px 525px;}
-    p  {font-family: gill sans mt; 
-        font-size: 400%;
-        color: black;
-        margin-top: 00px;
-        margin-bottom: 40px;
-        margin-right: 00px;
-        margin-left: 20px;}
-    pre {font-family: gill sans mt; src: url(gill sans mt.TTF');
-        font-size: 100%;
-        color: white;
-        margin-top: 00px;
-        margin-bottom: 20px;
-        margin-right: 40px;
-        margin-left: 20px;}
-    ol {font-family: gill sans mt;
-        font-size: 100%;
-        color: white;
-        margin-top: 00px;
-        margin-bottom: 20px;
-        margin-right: 00px;
-        margin-left: 20px;}
-    p2 {font-family: gill sans mt;
-        font-size: 100%;
-        color: black;
-        margin-top: 40px;
-        margin-bottom: 00px;
-        margin-right: 00px;
-        margin-left: 20px;}
+body {font-family: gill sans mt;
+      margin: 0;}
+.flex-container{
+    display: flex;
+    margin-right: 20px;
+    margin-left: 00px;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+.header {
+  padding: 00px 00px;
+  flex-direction: row;
+  text-align: left;
+  background: white;
+  color: black;
+  font-size: 444%;
+    }
+.main {
+    padding: 20px 20px;
+    background-color: darkseagreen;
+    font-size: 44%;
+    color: white;
+    margin-right: 20px
+    }
+.navbar {
+    display: flex;
+    background-color: white;
+    color: black;
+    }
+.navbar a {
+  color: black;
+  padding: 08px 14px;
+  text-decoration: none;
+  text-align: left;
+  font-size: 80%;
+    margin-bottom: 14px;
+}
 </style>
 <body><i>
+<div class="row">
+<div class="header">
 <p>etc.</p>
-<pre>
-This page contains links to more pages that I'm
+<div class="main">
+<p>This page contains links to more pages that I'm
 working on. At the moment I don't have much in
 the works but the following list are the projects
 I have planned.
-</pre>
 <ol>
   <li>the prairie school</li>
   <li>gallery</li>
@@ -55,8 +60,11 @@ I have planned.
   <li>personality quiz</li>
   <li>pick a flavor</li>
   <li>astrology analysis</li>
-</ol>
-<p2><a href="index.html">RETURN</a></p2>
-</i>
-</body>
+</ol></p>
+</div>
+</div>
+<div class="navbar">
+    <a href="index.html">RETURN</a>
+</div>
+</i></body>
 </html>
