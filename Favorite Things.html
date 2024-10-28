@@ -1,43 +1,52 @@
 <doctype HTML>
 <html lang='en'>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Favorites</title>
 </head>
 <style>
-    body {background: rgb(255, 255, 255); background-image: url("FTBG.JPEG");
-                                    background-repeat: no-repeat;
-                                    background-position: 0% 88%;
-                                    background background-attachment: fixed;
-                                    background-size: 380px 1300px;}
-    pre {font-family: gill sans mt;
-        font-size: 400%;
-        color: black;
-        margin-top: 00px;
-        margin-bottom: 40px;
-        margin-right: 00px;
-        margin-left: 20px;}
-    ul {font-family: gill sans mt;
-        font-size: 100%;
-        color: white;
-        margin-top: 00px;
-        margin-bottom: 14px;
-        margin-right: 00px;
-        margin-left: 20px;}
-    p2 {font-family: gill sans mt;
-        font-size: 100%;
-        color: black;
-        margin-top: 40px;
-        margin-bottom: 00px;
-        margin-right: 00px;
-        margin-left: 20px;}
+body {font-family: gill sans mt;
+      margin: 0;}
+.flex-container{
+    display: flex;
+    margin-right: 20px;
+    margin-left: 00px;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+.header {
+  padding: 00px 00px;
+  flex-direction: row;
+  text-align: left;
+  background: white;
+  color: black;
+  font-size: 444%;
+    }
+.main {
+    padding: 20px 20px;
+    background-color: darkseagreen;
+    font-size: 222%;
+    color: white;
+    }
+.navbar {
+    display: flex;
+    background-color: white;
+    color: black;
+    }
+.navbar a {
+  color: black;
+  padding: 08px 14px;
+  text-decoration: none;
+  text-align: left;
+  font-size: 80%;
+    margin-bottom: 14px;
+}
 </style>
 <body><i>
-<pre>
-comprehensive 
-list of my 
-favorite things:
-</pre><ul>
+<div class="header">
+<p>a comprehensive list of my favorite things:</p>
+</div>
+<div class="main">
+<ul>
 <li>Actor: Leslie Cheung</li>
 <li>Album: Punisher by Phoebe Bridgers</li>
 <li>American Actor: Jessica Chastain</li>
@@ -106,7 +115,7 @@ favorite things:
 <li>Studio Ghibli film: Howl’s Moving Castle</li>
 <li>Super Model: Kate Moss</li>
 <li>Top Model: Allison Harvard</li>
-</ul>
+</ul></div>
 <p2><a href="index.html">RETURN</a></p2>
 </i></body>
 </html>
