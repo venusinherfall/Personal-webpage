@@ -1,48 +1,52 @@
 <doctype HTML>
 <html lang='en'>
 <head>
-  <title>Required Readings</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cohengib.com</title>
 </head>
 <style>
-    body {background: rgb(255, 255, 255); background-image: url("RRBG.JPEG");
-                                    background-repeat: no-repeat;
-                                    background-position: 0% 80%;
-                                    background background-attachment: fixed;
-                                    background-size:360px 444px;}
-    pre {font-family: gill sans mt;
-        font-size: 400%;
-        color: black;
-        margin-top: 00px;
-        margin-bottom: 40px;
-        margin-right: 00px;
-        margin-left: 20px;}
-    p {font-family: gill sans mt;
-        font-size: 100%;
-        color: white;
-        margin-top: 00px;
-        margin-bottom: 00px;
-        margin-right: 00px;
-        margin-left: 08px;}
-    ol {font-family: gill sans mt;
-        font-size: 100%;
-        color: white;
-        margin-top: 00px;
-        margin-bottom: 00px;
-        margin-right: 24px;
-        margin-left: 08px;}
-    p2 {font-family: gill sans mt;
-        font-size: 100%;
-        color: black;
-        margin-top: 20px;
-        margin-bottom: 00px;
-        margin-right: 00px;
-        margin-left: 20px;}
-    </style>
+body {font-family: gill sans mt;
+      margin: 0;}
+.flex-container{
+    display: flex;
+    margin-right: 20px;
+    margin-left: 00px;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+.header {
+  padding: 00px 00px;
+  flex-direction: row;
+  text-align: left;
+  background: white;
+  color: black;
+  font-size: 444%;
+    }
+.main {
+    padding: 20px 20px;
+    background-color: darkseagreen;
+    font-size: 222%;
+    color: white;
+    }
+.navbar {
+    display: flex;
+    background-color: white;
+    color: black;
+    }
+.navbar a {
+  color: black;
+  padding: 08px 14px;
+  text-decoration: none;
+  text-align: left;
+  font-size: 80%;
+    margin-bottom: 14px;
+}
+</style>
 <body><i>
-<pre>
-required
-readings</pre>
+<div class="row">
+<div class="header">
+<p>required readings</p>
+<div class="main">
 <p>The following texts are literary works that are very important to me.</p>
 <ol>
     <li>Absalom, Absalom! by William Faulkner</li>
@@ -61,7 +65,11 @@ readings</pre>
     <li>Miss Brill by Katherine Mansfield</li>
     <li>Good Country People by Flannery O'Connor</li>
     <li>Jane Eyre by Charlotte Brontë</li>
-</ol>
-<p2><a href="index.html">RETURN</a></p2>
+</ol></p>
+</div>
+</div>
+<div class="navbar">
+    <a href="index.html">RETURN</a>
+</div>
 </i></body>
 </html>
