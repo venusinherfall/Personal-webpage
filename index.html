@@ -5,38 +5,49 @@
   <title>cohengib.com</title>
 </head>
 <style>
-    body {background: rgb(255, 255, 255); background-image: url("MLCEBG.JPEG");
-                                    background-repeat: no-repeat;
-                                    background-position: 0% 70%;
-                                    background background-attachment: fixed;
-                                    background-size:360px 626px;}
-    p1 { font-family: gill sans mt;
-        font-size: 400%;
-        color: black;
-        margin-top: 00px;
-        margin-bottom: 80px;
-        margin-right: 00px;
-        margin-left: 20px;}
-    pre {font-family: gill sans mt;
-        font-size: 100%;
-        color: white;
-        margin-top: 00px;
-        margin-bottom: 00px;
-        margin-right: 00px;
-        margin-left: 20px;}
-    p {font-family: gill sans mt;
-        font-size: 100%;
-        color: black;
-        margin-top: 00px;
-        margin-bottom: 20px;
-        margin-right: 00px;
-        margin-left: 20px;}
+body {font-family: gill sans mt;
+      margin: 0;}
+.flex-container{
+    display: flex;
+    margin-right: 20px;
+    margin-left: 00px;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+.header {
+  padding: 00px 00px;
+  flex-direction: row;
+  text-align: left;
+  background: white;
+  color: black;
+  font-size: 444%;
+    }
+.main {
+    padding: 20px 20px;
+    background-color: darkseagreen;
+    font-size: 222%;
+    color: white;
+    }
+.navbar {
+    display: flex;
+    background-color: white;
+    color: black;
+    }
+.navbar a {
+  color: black;
+  padding: 08px 14px;
+  text-decoration: none;
+  text-align: left;
+  font-size: 80%;
+    margin-bottom: 14px;
+}
 </style>
-<body>
-<p1><i>cohen gibson</i></p1>
-<pre><i>
-
-Hi, I’m Cohen Gibson and welcome to my 
+<body><i>
+<div class="row">
+<div class="header">
+<p>cohen gibson</p>
+<div class="main">
+<p>Hi, I’m Cohen Gibson and welcome to my 
 personal webpage. I’m a twenty-four-year-old 
 American, who was born and raised in the 
 great state of West Virginia. I was inspired
@@ -46,17 +57,15 @@ site is a work in progress and at the moment
 I'm working on remaking this site with flexbox.
 I like art, cinema, divinity, fitness, history,
 international relations, linguistics, literature
-& philosophy.</i>
-
-
-
-
-
-<img src="C547EB62-5F97-4BA1-B521-11D2D1B5557C_VSCO.jpeg" alt="Portrait of Cohen Gibson" width="158" height="212">
-
-
-
-</pre>
-<p><i><a href="requiredreadings.html"> required readings </a> | <a href="Favorite Things.html"> favorite things </a> | <a href="lately.html"> lately </a> | <a href="etc.html"> etc. </a></i></p>
-</body>
+& philosophy.</p>
+<img src="ID-2025.jpg" alt="Portrait of Cohen Gibson" width="158" height="212">
+</div>
+</div>
+<div class="navbar">
+    <a href="requiredreadings.html">readings </a>
+    <a href="Favorite%20Things.html">things </a>
+    <a href="lately.html">lately </a>
+    <a href="etc.html">etc.</a>
+</div>
+</i></body>
 </html>
