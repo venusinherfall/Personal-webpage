@@ -148,20 +148,29 @@
       }
     }
 
-    function checkAnswer() {
-      const userAnswer = document.getElementById("user-answer").value.trim().toLowerCase();
-      const correctAnswer = dialogue[dialogueIndex].answer.toLowerCase();
+function checkAnswer() {
+  const userAnswer = document.getElementById("user-answer").value.trim().toLowerCase();
+  const correctAnswer = dialogue[dialogueIndex].answer.toLowerCase();
 
-      if (userAnswer === correctAnswer) {
-        // Clear input
-        document.getElementById("user-answer").value = "";
-        document.getElementById("answer-box").style.display = "none";
-        dialogueIndex++; // move to next dialogue
-        advanceDialogue(); // continue
-      } else {
-        alert("WRONG!! Only the most fierce individuals can enter this site ( ◡̀_◡́)ᕤ.");
-      }
-    }
+  // Define the security key (case-insensitive)
+  const securityKey = "vikings only";
+
+  // If it's the first question and the user types the security key
+  if (dialogueIndex === 2 && userAnswer === securityKey.toLowerCase()) {
+    window.location.href = "aboutme.html"; // Bypass to next page
+    return;
+  }
+
+  if (userAnswer === correctAnswer) {
+    // Clear input
+    document.getElementById("user-answer").value = "";
+    document.getElementById("answer-box").style.display = "none";
+    dialogueIndex++; // move to next dialogue
+    advanceDialogue(); // continue
+  } else {
+    alert("WRONG!! Only the most fierce individuals can enter this site ( ◡̀_◡́)ᕤ.");
+  }
+}
 
     // Start with the first line
     window.onload = () => {
