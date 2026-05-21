@@ -127,7 +127,7 @@
     .link-placeholder {
       width: 100%;
       aspect-ratio: 16/9;
-      background: darkseagreen;
+      background: #7F8D63;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -216,7 +216,6 @@
 
     <div class="grid" id="grid">
 
-      <!-- ░░ LINK BLOCK ░░ -->
       <a class="block block-link" href="https://www.cohengib.com/archives" target="_blank" rel="noopener">
         <div class="block-label">
           <span class="type">Japanese Religion</span>
@@ -225,19 +224,18 @@
           <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Kajikazawa_in_Kai_Province_%28Koshu_Kajikazawa%29.jpg" alt="甲州石班澤" />
       </a>
 
-      <!-- ░░ LINK BLOCK with thumbnail ░░ -->
       <a class="block block-link" href="#" target="_blank" rel="noopener">
         <div class="block-label">
-          <span class="type">link · example.com</span>
-          An article or page worth saving
+          <span class="type">Setting the South</span>
+          Defining the South.
         </div>
-        <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80" alt="Books" />
+          <div class="link-placeholder"><span>Setting the South</span></div>
       </a>
 
-    </div><!-- /grid -->
-  </div><!-- /main -->
+    </div>
+  </div>
 
-  <!-- Navbar -->
+
   <div class="navbar">
     <a href="aboutme.html">return</a>
   </div>
@@ -246,12 +244,6 @@
     const blocks = document.querySelectorAll('.block');
     document.getElementById('block-count').textContent = blocks.length + ' blocks';
 
-    /* ── HOW TO ADD A NEW BLOCK ──────────────────────────────────────
-     *
-     * Copy any block snippet and paste it inside #grid.
-     * The label/type always sits at the TOP of each block.
-     * Block types: block-image, block-text, block-link, block-quote, block-color
-     * ─────────────────────────────────────────────────────────────── */
   </script>
 
 </body>
