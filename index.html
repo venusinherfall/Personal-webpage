@@ -1,181 +1,88 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta charset="UTF-8">
-	<title>Halt! who goes there?</title>
-</head>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-      body {
-  font-family: 'Press Start 2P', monospace;
-      margin: 0;}
-.flex-container, .column{
-    Height: 100vh;
-    display: flex;
-    flex-flow: column;
-    Margin: 0;
-}
-.header {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 10px 0;
-	text-align: center;
-	background-color: rgb(27, 102, 130);
-	color: black;
-	font-size: 444%;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+  <style>
+    @font-face {
+      font-family: gillsansmtitalic;
+      src: url('gill-sans-mt-italic.ttf');
     }
-.main {
-    background-color: rgb(27, 102, 130);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    padding: 0;
-}
-.fullscreen-img {
-	max-width: 100%;
-	max-height: 100%
-	height: auto;
-	width: auto;
-	display: block;
-}
-   #dialogue-box {
+
+    body {
+      font-family: gillsansmtitalic, sans-serif;
+      margin: 0;
+    }
+
+    .flex-container {
+      display: flex;
+      margin-right: 20px;
+      margin-left: 0;
+      flex-flow: row nowrap;
+      justify-content: center;
+    }
+
+    .header {
+  	height: 180px;
+  	background: white;
+  	position: relative;
+	}
+
+    .header p {
+  	position: absolute;
+  	top: 20px;
+  	left: 0;
+  	margin: 0;
+  	padding: 0;
+  	font-size: 444%;
+  	color: black;
+  	background: white;
+    }
+
+
+    .main {
+      padding: 20px;
+      background-color: #7F8D63;
+      font-size: 200%;
+      color: white;
+      margin-right: 20px;
+    }
+
+    .navbar {
+      display: flex;
       background-color: white;
       color: black;
-      width: 90%;
-      max-width: 600px;
-      padding: 20px;
-      font-size: 12px;
-      position: relative;
-      box-shadow: 0 0 0 8px rgb(27, 102, 130);
+      padding: 10px 0;
     }
 
-    #dialogue-box::after {
-      content: "";
-      position: absolute;
-      bottom: -20px;
-      right: 40px;
-      width: 0;
-      height: 0;
-      border: 10px solid transparent;
-      border-top-color: white;
+    .navbar a {
+      color: black;
+      padding: 8px 14px;
+      text-decoration: none;
+      text-align: left;
+      font-size: 180%;
+      margin-bottom: 20px;
     }
-
-    #speaker {
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    #answer-box {
-      margin-top: 10px;
-    }
-
-    input[type="text"] {
-      padding: 4px;
-      font-family: inherit;
-      font-size: 12px;
-      width: 80%;
-    }
-
-    button {
-      padding: 4px 10px;
-      font-family: inherit;
-      font-size: 12px;
-      margin-top: 5px;
-      cursor: pointer;
-    }
-</style>
+  </style>
+</head>
 <body>
-<div class="flex-container">
+
   <div class="header">
-    <div id="dialogue-box" onclick="advanceDialogue()">
-      <div id="speaker">Heimvard</div>
-      <div id="dialogue-text">Hey there! Ready for a challenge?</div>
-      <div id="answer-box" style="display: none;" onclick="event.stopPropagation();">
-        <input type="text" id="user-answer" placeholder="Type your answer here">
-        <button onclick="checkAnswer()">Submit</button>
-      </div>
-    </div>
+    <p>pick a language</p>
   </div>
-<div class="main">
-    <img src="https://64.media.tumblr.com/d80d57a0690f63315f0fb6debcb9a434/tumblr_ohdf8cletH1ufdtcro4_1280.gif" class="fullscreen-img" alt="Vikings">
+
+  <div class="main">
+    <p></p>
+    
   </div>
-</div>
 
-  <script>
-    const dialogue = [
-      { type: "text", speaker: "Heimvard", text: "Statt! Hverr fer þar?" },
-      { type: "text", speaker: "Heimvard", text: "To enter this site, you must answer some questions.ᕙ( •̀ ᗜ •́ )ᕗ"},
-      { type: "question", speaker: "Heimvard", text: "Which equation states that in a right-angled triangle, the square of the hypotenuse is equal to the sum of the squares of the other two sides?", 	answer: "Pythagorean theorem" },
-      { type: "text", speaker: "Heimvard", text: "Correct! But entry isn't that easy." },
-	  { type: "question", speaker: "Heimvard", text: `How would you conjugate the French verb "valoir" for the second person singular présent tense?`, answer: "Tu vaux" },
-      { type: "text", speaker: "Heimvard", text: "Also right! You're smarter than you look." },
-	  { type: "question", speaker: "Heimvard", text: `Who is My Melody's cousin?`, answer: "littleforestfellow" },
-	  { type: "text", speaker: "Heimvard", text: "( ˶°ㅁ°) !! HOW DID YOU KNOW THAT!" },
-	  { type: "question", speaker: "Heimvard", text: `In the novel "Howl's Moving Castle", what does Mrs. Fairfax use to bind her spells?`, answer: "honey" },
-      { type: "text", speaker: "Heimvard", text: "(￢_￢) I fear you may be googling these answers. " },
-	  { type: "text", speaker: "Heimvard", text: "I think it's time for some harder questions." },
-	  { type: "question", speaker: "Heimvard", text: `What's my favorite Lana Del Rey album?`, answer: "Lust for Life" },
-	  { type: "text", speaker: "Heimvard", text: "(•᷄- •᷅ ;) I don't like that you knew the answer to that." },
-	  { type: "question", speaker: "Heimvard", text: `How many Labubus do I own?`, answer: "eight" },
-	  { type: "text", speaker: "Heimvard", text: "(ᵕ•_•) Don't look at me like that! Eight is an acceptable amount to own. They're also based on Scandinavian folklore so why wouldn't I have a few!" },
-	  { type: "text", speaker: "Heimvard", text: "Anyways. You may proceed!" },
-    ];
+  <div class="navbar">
+    <a href="aboutme.html">English</a>
+    <a href="aboutmefr.html">français</a>
+    <a href="aboutmeit.html">italiano</a>
+  </div>
 
-    let dialogueIndex = 0;
-
-    function advanceDialogue() {
-      const current = dialogue[dialogueIndex];
-
-      // If it's a question, wait for answer
-      if (current && current.type === "question") {
-        document.getElementById("dialogue-text").textContent = current.text;
-        document.getElementById("speaker").textContent = current.speaker;
-        document.getElementById("answer-box").style.display = "block";
-        return; // stop auto-advancing
-      }
-
-      // Show next dialogue
-      if (dialogueIndex < dialogue.length) {
-        document.getElementById("answer-box").style.display = "none"; // hide input if shown
-        document.getElementById("speaker").textContent = current.speaker;
-        document.getElementById("dialogue-text").textContent = current.text;
-        dialogueIndex++;
-      } else {
-        window.location.href = "aboutme.html";
-      }
-    }
-
-function checkAnswer() {
-  const userAnswer = document.getElementById("user-answer").value.trim().toLowerCase();
-  const correctAnswer = dialogue[dialogueIndex].answer.toLowerCase();
-
-  // Define the security key (case-insensitive)
-  const securityKey = "vikings only";
-
-  // If it's the first question and the user types the security key
-  if (dialogueIndex === 2 && userAnswer === securityKey.toLowerCase()) {
-    window.location.href = "aboutme.html"; // Bypass to next page
-    return;
-  }
-
-  if (userAnswer === correctAnswer) {
-    // Clear input
-    document.getElementById("user-answer").value = "";
-    document.getElementById("answer-box").style.display = "none";
-    dialogueIndex++; // move to next dialogue
-    advanceDialogue(); // continue
-  } else {
-    alert("WRONG!! Only the most fierce individuals can enter this site ( ◡̀_◡́)ᕤ.");
-  }
-}
-
-    // Start with the first line
-    window.onload = () => {
-      advanceDialogue();
-    };
-  </script>
 </body>
 </html>
+
